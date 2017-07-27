@@ -10,7 +10,7 @@ import java.util.Stack;
 
 public class TextEditor {
     public static StringBuilder addAfter(StringBuilder text, String wordEnd, String wordToInsert) {
-        Pattern pattern = Pattern.compile(wordEnd + "(\\s|$)");
+        Pattern pattern = Pattern.compile(wordEnd + "(\\b)");
         Matcher matcher = pattern.matcher(text);
 
         Stack<Integer> foundIndexes = new Stack<>();
